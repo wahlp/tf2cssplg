@@ -1,6 +1,7 @@
 <!-- App.svelte -->
 <script lang="ts">
   import { parseNameIdPairs } from './converter';
+  import { sample, ugly } from './samples'
 
   let inputText = localStorage.getItem('inputText') || "";
   let outputData = [];
@@ -19,21 +20,13 @@
   function loadExample(event) {
     event.preventDefault();
 
-    fetch('./sample.txt')
-      .then(response => response.text())
-      .then(data => {
-        inputText = data;
-      });
+    inputText = sample;
   }
 
   function loadUglyExample(event) {
     event.preventDefault();
 
-    fetch('./sample-ugly.txt')
-      .then(response => response.text())
-      .then(data => {
-        inputText = data;
-      });
+    inputText = ugly;
   }
 
 
