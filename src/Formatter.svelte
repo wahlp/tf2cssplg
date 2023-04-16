@@ -26,9 +26,20 @@
       });
   }
 
+  function loadUglyExample(event) {
+    event.preventDefault();
+
+    fetch('./sample-ugly.txt')
+      .then(response => response.text())
+      .then(data => {
+        inputText = data;
+      });
+  }
+
+
   function clearTextarea(event) {
     event.preventDefault();
-    
+
     inputText = '';
     localStorage.removeItem('inputText');
   }
@@ -41,6 +52,7 @@
       <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
       <div class="button-container">
         <button class="button button-example" on:click={loadExample}>Show me an example</button>
+        <button class="button button-example" on:click={loadUglyExample}>Ugly example</button>
         <button class="button button-clear" on:click={clearTextarea}>Clear</button>
         <button class="button button-submit" type="submit">Submit</button>
       </div>
@@ -141,9 +153,11 @@
   }
 
   .button-example {
-    width: 240px;
-    margin-right: 260px;
+    width: 200px;
     background-color: #3399cc;
+  }
+  .button-example:nth-child(2) {
+    margin-right: 100px;
   }
 
   .button-example:hover {
