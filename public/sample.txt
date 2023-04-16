@@ -1,0 +1,29 @@
+hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+version : 6986594/24 6986594 secure
+udp/ip  : 169.254.123.234:61736
+steamid : [A:1:1234567901:23456] (78901234567890123)
+account : not logged in  (No account specified)
+map     : pl_pier at: 0 x, 0 y, 0 z
+tags    : hidden,payload,valve
+players : 19 humans, 0 bots (32 max)
+edicts  : 1235 used of 2048 max
+# userid name                uniqueid            connected ping loss state
+#   1147 "player1"           [U:1:123456789]     00:20     93   17   active
+#   1145 "player2"           [U:1:234567891]     01:06     62   0    active
+#   1142 "player3"           [U:1:123456789]     01:26     86   0    active
+#   1129 "player4"           [U:1:234567891]     02:33     78   0    active
+#   1130 "player5"           [U:1:123456789]     02:29     86   0    active
+#   1131 "player6"           [U:1:234567891]     02:29     93   0    active
+#   1132 "player7"           [U:1:123456789]     02:28     86   0    active
+#   1119 "player8"           [U:1:234567891]     05:16     82   0    active
+#   1133 "player9"           [U:1:123456789]     02:27     83   0    active
+#   1121 "player10"          [U:1:234567891]     05:15     65   0    active
+#   1146 "player11"          [U:1:123456789]     00:58     43   0    active
+#   1123 "player12"          [U:1:234567891]     05:14     105  18   active
+#   1124 "player13"          [U:1:123456789]     05:08     211  0    active
+#   1125 "player14"          [U:1:234567891]     05:00     80   0    active
+#   1148 "player15"          [U:1:123456789]     00:11     74   75   spawning
+#   1149 "player16"          [U:1:234567891]     00:04     679  77   spawning
+#   1136 "player17"          [U:1:123456789]     02:01     69   0    active
+#   1138 "player18"          [U:1:234567891]     01:56     1038 58   active
+#   1144 "player19"          [U:1:123456789]     01:10     68   0    active

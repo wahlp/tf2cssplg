@@ -15,14 +15,37 @@
 
     outputData = parseNameIdPairs(inputText);
   }
+
+  function loadExample(event) {
+    event.preventDefault();
+
+    fetch('./sample.txt')
+      .then(response => response.text())
+      .then(data => {
+        inputText = data;
+      });
+  }
+
+  function clearTextarea(event) {
+    event.preventDefault();
+    
+    inputText = '';
+    localStorage.removeItem('inputText');
+  }
 </script>
 
 <div class="container">
-  <form on:submit|preventDefault={handleSubmit}>
-    <h1>dump your console output here</h1>
-    <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
-    <button class="button" type="submit">Submit</button>
-  </form>
+  <div class="form-container">
+    <form on:submit|preventDefault={handleSubmit}>
+      <h1>dump your console output here</h1>
+      <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
+      <div class="button-container">
+        <button class="button button-example" on:click={loadExample}>Show me an example</button>
+        <button class="button button-clear" on:click={clearTextarea}>Clear</button>
+        <button class="button button-submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
   <div class="table-container">
     <table>
       <thead>
@@ -64,11 +87,18 @@
     margin-left: 10px;
   }
 
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 8px;
@@ -89,10 +119,12 @@
     font-family: monospace;
   }
 
+  .button-container {
+    height: 60px;
+  }
+
   .button {
-    width: 100%;
-    height: 50px;
-    background-color: #4caf50;
+    height: 100%;
     color: white;
     border: none;
     border-radius: 4px;
@@ -100,8 +132,31 @@
     transition: background-color 0.2s;
   }
 
-  .button:hover {
+  .button-submit {
+    width: 180px;
+    background-color: #4caf50;
+  }
+  .button-submit:hover {
     background-color: #3e8e41;
+  }
+
+  .button-example {
+    width: 240px;
+    margin-right: 260px;
+    background-color: #3399cc;
+  }
+
+  .button-example:hover {
+    background-color: #2d85b1;
+  }
+
+  .button-clear {
+    width: 180px;
+    background-color: #ff7675;
+  }
+
+  .button-clear:hover {
+    background-color: #d96363;
   }
 
   table {
