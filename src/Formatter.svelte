@@ -15,10 +15,6 @@
 
     outputData = parseNameIdPairs(inputText);
   }
-
-  // function copyToClipboard(text) {
-  //   navigator.clipboard.writeText(text);
-  // }
 </script>
 
 <div class="container">
@@ -26,7 +22,6 @@
     <h1>dump your console output here</h1>
     <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
     <button class="button" type="submit">Submit</button>
-    <!-- <textarea class="output" bind:value={outputText} readonly /> -->
   </form>
   <div class="table-container">
     <table>
@@ -47,9 +42,6 @@
                 <a href={url} target="_blank" rel="noreferrer">
                   {url}
                 </a>
-                <!-- <button class="clipboard-icon" on:click={() => copyToClipboard(url)}>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-                </button> -->
               </div>
             </td>
           </tr>
@@ -76,7 +68,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     width: 50%;
     padding: 20px;
     background-color: #f2f2f2;
