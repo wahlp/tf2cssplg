@@ -2,11 +2,12 @@
 <script lang="ts">
   import { parseNameIdPairs } from './converter';
 
-  let inputText = "";
+  let inputText = localStorage.getItem('inputText') || "";
   let outputData = [];
 
   function handleInput(event) {
     inputText = event.target.value;
+    localStorage.setItem('inputText', inputText);
   }
 
   function handleSubmit(event) {
