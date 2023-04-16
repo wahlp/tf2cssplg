@@ -1,0 +1,30 @@
+hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+version : 6986594/24 6986594 secure
+udp/ip  : 169.254.200.190:53328
+steamid : [A:1:1446477828:19552] (90155969194459140)
+#   2635 "abcde12345"        [U:1:123456789]    12:39      116    0 active
+account : not logged in  (No account specified)
+#   2647 "asfasdr"           [U:1:234567891]    00:39       71    0 active
+map     : pl_barnblitz at: 0 x, 0 y, 0 z
+#   2648 "ljh qert"          [U:1:123456789]      00:33       69    0 active
+tags    : hidden,increased_maxplayers,payload,valve
+#   2646 "fjkllfmem-"         [U:1:234567891]     01:55       92    0 active
+players : 20 humans, 0 bots (32 max)
+#   2649 "Afgvzxd"             [U:1:123456789]    00:32       67    0 active
+edicts  : 1325 used of 2048 max
+#   2657 "DasdSdfg"            [U:1:234567891]      00:01      429   42 spawning
+# userid name                uniqueid            connected ping loss state
+#   2651 "Sfa,msdnsf"        [U:1:123456789]     00:25      123    0 active
+#   2652 "dgfhdd"               [U:1:234567891]      00:24       40    0 active
+#   2620 "f  e q sfgdsf"     [U:1:123456789]    17:17      121    0 active
+#   2653 "Eghgfhtryt"           [U:1:234567891]     00:20      117   19 active
+#   2654 "oiljzxi4"           [U:1:123456789]     00:19       80   69 active
+#   2627 "podisg"              [U:1:234567891]    14:08       60    0 active
+#   2609 "xcvhj ioreut"      [U:1:123456789]     19:20      113    0 active
+#   2655 "ipoeurasd"        [U:1:234567891]     00:19      110   76 spawning
+#   2656 "sdfgbrew235"             [U:1:123456789]     00:09      151   76 spawning
+#   2612 "HJKFD hdfg UTYORWU" [U:1:234567891] 19:11       75    0 active
+#   2613 "lgjxcvgwads"         [U:1:123456789]    19:09       72    0 spawning
+#   2642 "t09uw4"              [U:1:234567891]    09:10       57    0 active
+#   2586 "3f89hr"           [U:1:123456789]    25:21       87    0 active
+#   2643 "7y98vf"           [U:1:234567891]     08:43      114    0 active
