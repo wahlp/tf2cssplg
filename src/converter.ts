@@ -1,5 +1,6 @@
 type NameIdMapping = {
   name: string;
+  ping: string;
   id3: string;
   url: string;
 }
@@ -11,15 +12,15 @@ function convertSteam3ToSteam64(id3: string): string {
 }
 
 export function parseNameIdPairs(text: string): NameIdMapping[] {
-  const regex = /"(.+)"\s+\[U:(\d+):(\d+)\]/g;
+  const regex = /"(.+)"\s+\[U:(\d+):(\d+)\]\s+(\d+:\d+)\s+(\d+)/g;
   const mappings: NameIdMapping[] = [];
 
   let match: RegExpExecArray | null;
   while ((match = regex.exec(text))) {
-    const [, name, id_prefix, id] = match;
+    const [, name, id_prefix, id, time_connected, ping] = match;
     const id3 = `[U:${id_prefix}:${id}]`;
     const url = `https://steamcommunity.com/profiles/${convertSteam3ToSteam64(id)}/`;
-    mappings.push({ name, id3, url });
+    mappings.push({ name, ping, id3, url });
   }
 
   return mappings.sort((a, b) => {

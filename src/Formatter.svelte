@@ -56,14 +56,16 @@
       <thead>
         <tr>
           <th>Name</th>
+          <th>Ping</th>
           <th>ID3</th>
           <th>URL</th>
         </tr>
       </thead>
       <tbody>
-        {#each outputData as { name, id3, url }}
+        {#each outputData as { name, ping, id3, url }}
           <tr>
             <td>{name}</td>
+            <td>{ping}</td>
             <td>{id3}</td>
             <td>
               <div class="link-container">
@@ -150,7 +152,7 @@
     background-color: #3399cc;
   }
   .button-example:nth-child(2) {
-    margin-right: 100px;
+    margin-right: 60px;
   }
 
   .button-example:hover {
@@ -191,11 +193,11 @@
     min-width: 250px;
   }
 
-  th:nth-child(2), td:nth-child(2) {
-    min-width: 150px;
+  th:nth-child(3), td:nth-child(3) {
+    min-width: 130px;
   }
 
-  th:nth-child(3), td:nth-child(3) {
+  th:nth-child(4), td:nth-child(4) {
     min-width: 500px;
   }
 
