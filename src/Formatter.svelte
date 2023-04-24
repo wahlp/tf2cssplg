@@ -2,9 +2,13 @@
 <script lang="ts">
   import { parseNameIdPairs } from './converter';
   import { sample, ugly } from './samples'
+  import { naturalSort } from './util';
 
   let inputText = localStorage.getItem('inputText') || "";
   let outputData = [];
+  let sortOrder: 'asc' | 'desc' = 'asc';
+  let sortColumn: string = 'name';
+
 
   function handleInput(event) {
     inputText = event.target.value;
@@ -15,6 +19,7 @@
     event.preventDefault();
 
     outputData = parseNameIdPairs(inputText);
+    handleSort(sortColumn, false);
   }
 
   function loadExample(event) {
@@ -36,6 +41,37 @@
     inputText = '';
     localStorage.removeItem('inputText');
   }
+
+  function handleSort(column, enableInvert = true) {
+    if (sortColumn === column) {
+      if (enableInvert) 
+        sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+    } else {
+      sortColumn = column;
+      sortOrder = 'asc';
+    }
+
+    outputData = sortData(outputData, sortColumn, sortOrder);
+  }
+
+  function sortData(data, column, order) {
+    const sortedData = [...data];
+
+    sortedData.sort((a, b) => {
+      const aVal = a[column];
+      const bVal = b[column];
+
+      if (order === 'asc') {
+        return naturalSort(aVal, bVal);
+      } else {
+        return naturalSort(bVal, aVal);
+      }
+    });
+
+    return sortedData;
+  }
+
+
 </script>
 
 <div class="container">
@@ -55,10 +91,46 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Ping</th>
-          <th>ID3</th>
-          <th>URL</th>
+          <th 
+            class="{
+              sortColumn === 'name' 
+              ? sortOrder === 'asc' 
+                ? 'sorted-asc' 
+                : 'sorted-desc'
+              : undefined 
+            }"
+            on:click={() => handleSort('name')}
+          >Name</th>
+          <th 
+            class="{
+              sortColumn === 'ping' 
+              ? sortOrder === 'asc' 
+                ? 'sorted-asc' 
+                : 'sorted-desc'
+              : undefined 
+            }"
+            on:click={() => handleSort('ping')}
+          >Ping</th>
+          <th 
+            class="{
+              sortColumn === 'id3' 
+              ? sortOrder === 'asc' 
+                ? 'sorted-asc' 
+                : 'sorted-desc'
+              : undefined 
+            }"
+            on:click={() => handleSort('id3')}
+          >ID3</th>
+          <th 
+            class="{
+              sortColumn === 'url' 
+              ? sortOrder === 'asc' 
+                ? 'sorted-asc' 
+                : 'sorted-desc'
+              : undefined 
+            }"
+            on:click={() => handleSort('url')}
+          >URL</th>
         </tr>
       </thead>
       <tbody>
@@ -152,7 +224,7 @@
     background-color: #3399cc;
   }
   .button-example:nth-child(2) {
-    margin-right: 60px;
+    margin-right: 40px;
   }
 
   .button-example:hover {
@@ -193,6 +265,10 @@
     min-width: 250px;
   }
 
+  th:nth-child(2), td:nth-child(2) {
+    min-width: 60px;
+  }
+
   th:nth-child(3), td:nth-child(3) {
     min-width: 130px;
   }
@@ -201,8 +277,22 @@
     min-width: 500px;
   }
 
+  th.sorted-asc::after {
+    content: " ▲";
+  }
+
+  th.sorted-desc::after {
+    content: " ▼";
+  }
+
   th {
     background-color: #f2f2f2;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  th:hover {
+    background-color: #ddd;
   }
 
   tr:nth-child(even) {

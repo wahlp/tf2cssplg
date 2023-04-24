@@ -1,3 +1,5 @@
+import { naturalSort } from "./util";
+
 type NameIdMapping = {
   name: string;
   ping: string;
@@ -23,7 +25,5 @@ export function parseNameIdPairs(text: string): NameIdMapping[] {
     mappings.push({ name, ping, id3, url });
   }
 
-  return mappings.sort((a, b) => {
-    return a.name.localeCompare(b.name);
-  });
+  return mappings
 }
