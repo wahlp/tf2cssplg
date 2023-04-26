@@ -32,13 +32,6 @@
     }
   }
 
-  function clearTextarea(event) {
-    event.preventDefault();
-
-    inputText = '';
-    localStorage.removeItem('inputText');
-  }
-
   function handleSort(column, enableInvert = true) {
     if (sortColumn === column) {
       if (enableInvert) 
@@ -79,7 +72,6 @@
       <div class="button-container">
         <button class="button button-example" on:click={() => loadExample(event, 'nice')}>Show me an example</button>
         <button class="button button-example" on:click={() => loadExample(event, 'ugly')}>Ugly example</button>
-        <button class="button button-clear" on:click={clearTextarea}>Clear</button>
         <button class="button button-submit" type="submit">Submit</button>
       </div>
     </form>
@@ -221,20 +213,11 @@
     background-color: #3399cc;
   }
   .button-example:nth-child(2) {
-    margin-right: 40px;
+    margin-right: 200px;
   }
 
   .button-example:hover {
     background-color: #2d85b1;
-  }
-
-  .button-clear {
-    width: 180px;
-    background-color: #ff7675;
-  }
-
-  .button-clear:hover {
-    background-color: #d96363;
   }
 
   table {
