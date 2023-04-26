@@ -50,9 +50,9 @@
     align-items: center;
     width: 100%;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: #262626;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     height: 100%;
   }
@@ -67,6 +67,8 @@
     font-size: 18px;
     resize: none;
     font-family: monospace;
+    background-color: #333;
+    color: inherit;
   }
 
   .button-container {
@@ -84,15 +86,15 @@
 
   .button-submit {
     width: 180px;
-    background-color: #4caf50;
+    background-color: #419744;
   }
   .button-submit:hover {
-    background-color: #3e8e41;
+    background-color: #48a54b;
   }
 
   .button-example {
     width: 200px;
-    background-color: #3399cc;
+    background-color: #256d92;
   }
   .button-example:nth-child(2) {
     margin-right: 200px;

@@ -121,8 +121,8 @@
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    color: #ddd;
+    background-color: #333;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
@@ -159,21 +159,21 @@
   }
 
   th {
-    background-color: #f2f2f2;
+    background-color: #141414;
     user-select: none;
     cursor: pointer;
   }
 
   th:hover {
-    background-color: #ddd;
+    background-color: #444444;
   }
 
   tr:nth-child(even) {
-    background-color: #f8f8f8;
+    background-color: #2b2b2b;
   }
 
   tr:hover {
-    background-color: #f2f2f2;
+    background-color: #444444;
   }
 
   .link-container {
