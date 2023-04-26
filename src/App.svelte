@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Formatter from "./Formatter.svelte";
+  import InputForm from "./InputForm.svelte";
   import Output from "./Output.svelte";
 </script>
 
 <div class="container">
-  <Formatter />
+  <InputForm />
   <Output />
 </div>
 
