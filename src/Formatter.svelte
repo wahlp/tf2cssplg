@@ -5,15 +5,11 @@
 
   let inputText = localStorage.getItem('inputText') || "";
 
-  function handleInput(event) {
-    inputText = event.target.value;
-    localStorage.setItem('inputText', inputText);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
 
     dataStore.set(parseNameIdPairs(inputText));
+    localStorage.setItem('inputText', inputText);
   }
 
   function loadExample(event, example: string) {
@@ -30,7 +26,7 @@
 <div class="form-container">
   <form on:submit|preventDefault={handleSubmit}>
     <h1>dump your console output here</h1>
-    <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
+    <textarea class="input" spellcheck="false" bind:value={inputText} />
     <div class="button-container">
       <button class="button button-example" on:click={() => loadExample(event, 'nice')}>Show me an example</button>
       <button class="button button-example" on:click={() => loadExample(event, 'ugly')}>Ugly example</button>
