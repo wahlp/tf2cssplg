@@ -1,6 +1,4 @@
-import { naturalSort } from "./util";
-
-type NameIdMapping = {
+export type NameIdMapping = {
   name: string;
   ping: string;
   id3: string;
