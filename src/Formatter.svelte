@@ -22,18 +22,15 @@
     handleSort(sortColumn, false);
   }
 
-  function loadExample(event) {
+  function loadExample(event, example: String) {
     event.preventDefault();
 
-    inputText = sample;
+    if (example === 'nice') {
+      inputText = sample;
+    } else if (example === 'ugly') {
+      inputText = ugly;
+    }
   }
-
-  function loadUglyExample(event) {
-    event.preventDefault();
-
-    inputText = ugly;
-  }
-
 
   function clearTextarea(event) {
     event.preventDefault();
@@ -80,8 +77,8 @@
       <h1>dump your console output here</h1>
       <textarea class="input" spellcheck="false" bind:value={inputText} on:input={handleInput} />
       <div class="button-container">
-        <button class="button button-example" on:click={loadExample}>Show me an example</button>
-        <button class="button button-example" on:click={loadUglyExample}>Ugly example</button>
+        <button class="button button-example" on:click={() => loadExample(event, 'nice')}>Show me an example</button>
+        <button class="button button-example" on:click={() => loadExample(event, 'ugly')}>Ugly example</button>
         <button class="button button-clear" on:click={clearTextarea}>Clear</button>
         <button class="button button-submit" type="submit">Submit</button>
       </div>
