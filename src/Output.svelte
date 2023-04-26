@@ -1,11 +1,12 @@
 <script lang="ts">
+  import type { NameIdMapping } from './converter';
   import { naturalSort } from './util';
   import { dataStore } from './stores.js'
 
   let sortOrder: 'asc' | 'desc' = 'asc';
   let sortColumn: string = 'name';
 
-  let outputData;
+  let outputData: NameIdMapping[];
   
   dataStore.subscribe((value) => {
     outputData = value;
@@ -24,7 +25,7 @@
       outputData = sortData(outputData, sortColumn, sortOrder);
   }
 
-  function sortData(data, column, order) {
+  function sortData(data: NameIdMapping[], column: string, order: string) {
       const sortedData = [...data];
 
       sortedData.sort((a, b) => {
