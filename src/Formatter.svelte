@@ -1,4 +1,3 @@
-<!-- App.svelte -->
 <script lang="ts">
   import { parseNameIdPairs } from './converter';
   import { sample, ugly } from './samples'
@@ -8,7 +7,6 @@
   let outputData = [];
   let sortOrder: 'asc' | 'desc' = 'asc';
   let sortColumn: string = 'name';
-
 
   function handleInput(event) {
     inputText = event.target.value;
@@ -60,8 +58,6 @@
 
     return sortedData;
   }
-
-
 </script>
 
 <div class="container">
@@ -289,7 +285,6 @@
   }
 
   .link-container a {
-    /* flex-grow: 1; */
     margin-right: 15px;
   }
 </style>
