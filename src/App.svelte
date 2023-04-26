@@ -14,6 +14,5 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100vh;
   }
 </style>
