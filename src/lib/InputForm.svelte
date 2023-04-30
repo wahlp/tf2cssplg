@@ -1,25 +1,25 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { parseNameIdPairs } from './converter';
-  import { sample, ugly } from './samples'
   import { dataStore } from './stores.js'
+  
+  let inputText = checkLocalStorage();
 
-  let inputText = localStorage.getItem('inputText') || "";
+  function checkLocalStorage() {
+    if (typeof window !== "undefined") {
+      const text = localStorage.getItem('inputText');
+      if (typeof text === "string") {
+        return text;
+      }
+    }
+    return "";
+  }
 
-  function handleSubmit(event) {
+  function handleSubmit(event: Event) {
     event.preventDefault();
 
     dataStore.set(parseNameIdPairs(inputText));
     localStorage.setItem('inputText', inputText);
-  }
-
-  function loadExample(event, example: string) {
-    event.preventDefault();
-
-    if (example === 'nice') {
-      inputText = sample;
-    } else if (example === 'ugly') {
-      inputText = ugly;
-    }
   }
 </script>
 
@@ -28,8 +28,7 @@
     <h1>dump your console output here</h1>
     <textarea class="input" spellcheck="false" bind:value={inputText} />
     <div class="button-container">
-      <button class="button button-example" on:click={() => loadExample(event, 'nice')}>Show me an example</button>
-      <button class="button button-example" on:click={() => loadExample(event, 'ugly')}>Ugly example</button>
+      <a href="{base}/examples" class="examples-link">See examples</a>
       <button class="button button-submit" type="submit">Submit</button>
     </div>
   </form>
@@ -72,6 +71,13 @@
 
   .button-container {
     height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .examples-link {
+    color: rgb(0, 128, 255);
   }
 
   .button {
@@ -89,17 +95,5 @@
   }
   .button-submit:hover {
     background-color: #48a54b;
-  }
-
-  .button-example {
-    width: 200px;
-    background-color: #256d92;
-  }
-  .button-example:nth-child(2) {
-    margin-right: 200px;
-  }
-
-  .button-example:hover {
-    background-color: #2d85b1;
   }
 </style>

@@ -29,8 +29,8 @@
       const sortedData = [...data];
 
       sortedData.sort((a, b) => {
-      const aVal = a[column];
-      const bVal = b[column];
+      const aVal = a[column as keyof NameIdMapping];
+      const bVal = b[column as keyof NameIdMapping];
 
       if (order === 'asc') {
           return naturalSort(aVal, bVal);

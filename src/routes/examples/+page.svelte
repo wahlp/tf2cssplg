@@ -1,4 +1,13 @@
-export const sample = `hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+<svelte:head>
+    <title>tf2cssplg2 | Examples</title> 
+</svelte:head>
+
+<h1>Examples of what can be used as input data</h1>
+
+<div>
+  <h3>Basic example</h3>
+  <code>
+hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
 version : 6986594/24 6986594 secure
 udp/ip  : 169.254.123.234:61736
 steamid : [A:1:1234567901:23456] (78901234567890123)
@@ -27,9 +36,11 @@ edicts  : 1235 used of 2048 max
 #   1136 "player17"          [U:1:123456789]     02:01     69   0    active
 #   1138 "player18"          [U:1:234567891]     01:56     1038 58   active
 #   1144 "player19"          [U:1:123456789]     01:10     68   0    active
-`
-
-export const ugly = `hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+  </code>
+  
+  <h3>Uglier but still functional</h3>
+  <code>
+hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
 version : 6986594/24 6986594 secure
 udp/ip  : 169.254.200.190:53328
 steamid : [A:1:1446477828:19552] (90155969194459140)
@@ -59,4 +70,19 @@ edicts  : 1325 used of 2048 max
 #   2642 "t09uw4"              [U:1:234567891]    09:10       57    0 active
 #   2586 "3f89hr"           [U:1:123456789]    25:21       87    0 active
 #   2643 "7y98vf"           [U:1:234567891]     08:43      114    0 active
-`
+  </code>
+</div>
+
+<style>
+  div {
+    margin-left: 20px;
+  }
+
+  code {
+    display: inline-block;
+    white-space: pre-wrap;
+    background: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+</style>
