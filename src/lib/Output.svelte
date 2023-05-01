@@ -118,4 +118,5 @@
   }
 
   th { @apply select-none; }
+  td { @apply !text-base; }
 </style>
