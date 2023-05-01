@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<link rel='stylesheet' href='./global.css'>
 		<meta name="viewport" content="width=device-width" />
 
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page.4de94211.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.12553131.js">
+		<link href="./_app/immutable/assets/_layout.8981e8ed.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page.d35a4105.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.bff47e20.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.8a750992.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.d59a704f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.0ac0f041.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.706c3f63.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/layout.svelte.7d7ec113.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.4222442f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.1b659909.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.593b1e57.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.ff365516.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.js.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/examples-page.svelte.1f215fca.js"><title>tf2cssplg2 | Examples</title><!-- HEAD_svelte-d71dee_START --><!-- HEAD_svelte-d71dee_END -->
+		<link rel="modulepreload" href="./_app/immutable/entry/examples-page.svelte.74a1768c.js"><title>tf2cssplg2 | Examples</title><!-- HEAD_svelte-d71dee_START --><!-- HEAD_svelte-d71dee_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -24,79 +24,81 @@
 
 
 
-<h1>Examples of what can be used as input data</h1>
-
-<div class="svelte-4ervlf"><h3>Basic example</h3>
-  <code class="svelte-4ervlf">hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
-version : 6986594/24 6986594 secure
-udp/ip  : 169.254.123.234:61736
-steamid : [A:1:1234567901:23456] (78901234567890123)
-account : not logged in  (No account specified)
-map     : pl_pier at: 0 x, 0 y, 0 z
-tags    : hidden,payload,valve
-players : 19 humans, 0 bots (32 max)
-edicts  : 1235 used of 2048 max
-# userid name                uniqueid            connected ping loss state
-#   1147 &quot;player1&quot;           [U:1:123456789]     00:20     93   17   active
-#   1145 &quot;player2&quot;           [U:1:234567891]     01:06     62   0    active
-#   1142 &quot;player3&quot;           [U:1:123456789]     01:26     86   0    active
-#   1129 &quot;player4&quot;           [U:1:234567891]     02:33     78   0    active
-#   1130 &quot;player5&quot;           [U:1:123456789]     02:29     86   0    active
-#   1131 &quot;player6&quot;           [U:1:234567891]     02:29     93   0    active
-#   1132 &quot;player7&quot;           [U:1:123456789]     02:28     86   0    active
-#   1119 &quot;player8&quot;           [U:1:234567891]     05:16     82   0    active
-#   1133 &quot;player9&quot;           [U:1:123456789]     02:27     83   0    active
-#   1121 &quot;player10&quot;          [U:1:234567891]     05:15     65   0    active
-#   1146 &quot;player11&quot;          [U:1:123456789]     00:58     43   0    active
-#   1123 &quot;player12&quot;          [U:1:234567891]     05:14     105  18   active
-#   1124 &quot;player13&quot;          [U:1:123456789]     05:08     211  0    active
-#   1125 &quot;player14&quot;          [U:1:234567891]     05:00     80   0    active
-#   1148 &quot;player15&quot;          [U:1:123456789]     00:11     74   75   spawning
-#   1149 &quot;player16&quot;          [U:1:234567891]     00:04     679  77   spawning
-#   1136 &quot;player17&quot;          [U:1:123456789]     02:01     69   0    active
-#   1138 &quot;player18&quot;          [U:1:234567891]     01:56     1038 58   active
-#   1144 &quot;player19&quot;          [U:1:123456789]     01:10     68   0    active
-  </code>
+<div class="container mt-6 svelte-ujemjy"><h1>Examples of what can be used as input data</h1>
   
-  <h3>Uglier but still functional</h3>
-  <code class="svelte-4ervlf">hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
-version : 6986594/24 6986594 secure
-udp/ip  : 169.254.200.190:53328
-steamid : [A:1:1446477828:19552] (90155969194459140)
-#   2635 &quot;abcde12345&quot;        [U:1:123456789]    12:39      116    0 active
-account : not logged in  (No account specified)
-#   2647 &quot;asfasdr&quot;           [U:1:234567891]    00:39       71    0 active
-map     : pl_barnblitz at: 0 x, 0 y, 0 z
-#   2648 &quot;ljh qert&quot;          [U:1:123456789]      00:33       69    0 active
-tags    : hidden,increased_maxplayers,payload,valve
-#   2646 &quot;fjkllfmem-&quot;         [U:1:234567891]     01:55       92    0 active
-players : 20 humans, 0 bots (32 max)
-#   2649 &quot;Afgvzxd&quot;             [U:1:123456789]    00:32       67    0 active
-edicts  : 1325 used of 2048 max
-#   2657 &quot;DasdSdfg&quot;            [U:1:234567891]      00:01      429   42 spawning
-# userid name                uniqueid            connected ping loss state
-#   2651 &quot;Sfa,msdnsf&quot;        [U:1:123456789]     00:25      123    0 active
-#   2652 &quot;dgfhdd&quot;               [U:1:234567891]      00:24       40    0 active
-#   2620 &quot;f  e q sfgdsf&quot;     [U:1:123456789]    17:17      121    0 active
-#   2653 &quot;Eghgfhtryt&quot;           [U:1:234567891]     00:20      117   19 active
-#   2654 &quot;oiljzxi4&quot;           [U:1:123456789]     00:19       80   69 active
-#   2627 &quot;podisg&quot;              [U:1:234567891]    14:08       60    0 active
-#   2609 &quot;xcvhj ioreut&quot;      [U:1:123456789]     19:20      113    0 active
-#   2655 &quot;ipoeurasd&quot;        [U:1:234567891]     00:19      110   76 spawning
-#   2656 &quot;sdfgbrew235&quot;             [U:1:123456789]     00:09      151   76 spawning
-#   2612 &quot;HJKFD hdfg UTYORWU&quot; [U:1:234567891] 19:11       75    0 active
-#   2613 &quot;lgjxcvgwads&quot;         [U:1:123456789]    19:09       72    0 spawning
-#   2642 &quot;t09uw4&quot;              [U:1:234567891]    09:10       57    0 active
-#   2586 &quot;3f89hr&quot;           [U:1:123456789]    25:21       87    0 active
-#   2643 &quot;7y98vf&quot;           [U:1:234567891]     08:43      114    0 active
-  </code>
+  <br>
+  
+  <div class="svelte-ujemjy"><h3>Basic example</h3>
+    <code class="svelte-ujemjy">hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+  version : 6986594/24 6986594 secure
+  udp/ip  : 169.254.123.234:61736
+  steamid : [A:1:1234567901:23456] (78901234567890123)
+  account : not logged in  (No account specified)
+  map     : pl_pier at: 0 x, 0 y, 0 z
+  tags    : hidden,payload,valve
+  players : 19 humans, 0 bots (32 max)
+  edicts  : 1235 used of 2048 max
+  # userid name                uniqueid            connected ping loss state
+  #   1147 &quot;player1&quot;           [U:1:123456789]     00:20     93   17   active
+  #   1145 &quot;player2&quot;           [U:1:234567891]     01:06     62   0    active
+  #   1142 &quot;player3&quot;           [U:1:123456789]     01:26     86   0    active
+  #   1129 &quot;player4&quot;           [U:1:234567891]     02:33     78   0    active
+  #   1130 &quot;player5&quot;           [U:1:123456789]     02:29     86   0    active
+  #   1131 &quot;player6&quot;           [U:1:234567891]     02:29     93   0    active
+  #   1132 &quot;player7&quot;           [U:1:123456789]     02:28     86   0    active
+  #   1119 &quot;player8&quot;           [U:1:234567891]     05:16     82   0    active
+  #   1133 &quot;player9&quot;           [U:1:123456789]     02:27     83   0    active
+  #   1121 &quot;player10&quot;          [U:1:234567891]     05:15     65   0    active
+  #   1146 &quot;player11&quot;          [U:1:123456789]     00:58     43   0    active
+  #   1123 &quot;player12&quot;          [U:1:234567891]     05:14     105  18   active
+  #   1124 &quot;player13&quot;          [U:1:123456789]     05:08     211  0    active
+  #   1125 &quot;player14&quot;          [U:1:234567891]     05:00     80   0    active
+  #   1148 &quot;player15&quot;          [U:1:123456789]     00:11     74   75   spawning
+  #   1149 &quot;player16&quot;          [U:1:234567891]     00:04     679  77   spawning
+  #   1136 &quot;player17&quot;          [U:1:123456789]     02:01     69   0    active
+  #   1138 &quot;player18&quot;          [U:1:234567891]     01:56     1038 58   active
+  #   1144 &quot;player19&quot;          [U:1:123456789]     01:10     68   0    active
+    </code>
+  
+    <h3>Uglier but still functional</h3>
+    <code class="svelte-ujemjy">hostname: Valve Matchmaking Server (Hong Kong srcds1234-hkg56 #7)
+  version : 6986594/24 6986594 secure
+  udp/ip  : 169.254.200.190:53328
+  steamid : [A:1:1446477828:19552] (90155969194459140)
+  #   2635 &quot;abcde12345&quot;        [U:1:123456789]    12:39      116    0 active
+  account : not logged in  (No account specified)
+  #   2647 &quot;asfasdr&quot;           [U:1:234567891]    00:39       71    0 active
+  map     : pl_barnblitz at: 0 x, 0 y, 0 z
+  #   2648 &quot;ljh qert&quot;          [U:1:123456789]      00:33       69    0 active
+  tags    : hidden,increased_maxplayers,payload,valve
+  #   2646 &quot;fjkllfmem-&quot;         [U:1:234567891]     01:55       92    0 active
+  players : 20 humans, 0 bots (32 max)
+  #   2649 &quot;Afgvzxd&quot;             [U:1:123456789]    00:32       67    0 active
+  edicts  : 1325 used of 2048 max
+  #   2657 &quot;DasdSdfg&quot;            [U:1:234567891]      00:01      429   42 spawning
+  # userid name                uniqueid            connected ping loss state
+  #   2651 &quot;Sfa,msdnsf&quot;        [U:1:123456789]     00:25      123    0 active
+  #   2652 &quot;dgfhdd&quot;               [U:1:234567891]      00:24       40    0 active
+  #   2620 &quot;f  e q sfgdsf&quot;     [U:1:123456789]    17:17      121    0 active
+  #   2653 &quot;Eghgfhtryt&quot;           [U:1:234567891]     00:20      117   19 active
+  #   2654 &quot;oiljzxi4&quot;           [U:1:123456789]     00:19       80   69 active
+  #   2627 &quot;podisg&quot;              [U:1:234567891]    14:08       60    0 active
+  #   2609 &quot;xcvhj ioreut&quot;      [U:1:123456789]     19:20      113    0 active
+  #   2655 &quot;ipoeurasd&quot;        [U:1:234567891]     00:19      110   76 spawning
+  #   2656 &quot;sdfgbrew235&quot;             [U:1:123456789]     00:09      151   76 spawning
+  #   2612 &quot;HJKFD hdfg UTYORWU&quot; [U:1:234567891] 19:11       75    0 active
+  #   2613 &quot;lgjxcvgwads&quot;         [U:1:123456789]    19:09       72    0 spawning
+  #   2642 &quot;t09uw4&quot;              [U:1:234567891]    09:10       57    0 active
+  #   2586 &quot;3f89hr&quot;           [U:1:123456789]    25:21       87    0 active
+  #   2643 &quot;7y98vf&quot;           [U:1:234567891]     08:43      114    0 active
+    </code></div>
 </div>
 
 
 			
 			<script>
 				{
-					__sveltekit_3857qx = {
+					__sveltekit_d5cscb = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -106,8 +108,8 @@ edicts  : 1325 used of 2048 max
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.12553131.js"),
-						import("./_app/immutable/entry/app.706c3f63.js")
+						import("./_app/immutable/entry/start.bff47e20.js"),
+						import("./_app/immutable/entry/app.593b1e57.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],
