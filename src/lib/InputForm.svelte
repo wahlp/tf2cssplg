@@ -26,7 +26,7 @@
 
 <div class="w-4/5 h-[100vh]">
   <form on:submit|preventDefault={handleSubmit} class="flex flex-col items-center w-full h-full p-6 space-y-4">
-    <h1>dump your console output here</h1>
+    <h2 class="font-bold">dump your console output here</h2>
     <textarea class="textarea p-3 h-full w-full resize-none font-mono" rows="24" spellcheck="false" bind:value={inputText} />
     <div class="w-full flex justify-between">
       <a href="{base}/examples" class="h-fit">See examples</a>
