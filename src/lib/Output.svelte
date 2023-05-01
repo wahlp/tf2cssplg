@@ -109,47 +109,6 @@
 </div>
 
 <style>
-  /* .table-container {
-    margin-left: 10px;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #ddd;
-    background-color: #333;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-  }
-
-  th,
-  td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th:nth-child(1), td:nth-child(1) {
-    min-width: 250px;
-  }
-
-  th:nth-child(2), td:nth-child(2) {
-    min-width: 60px;
-  }
-
-  th:nth-child(3), td:nth-child(3) {
-    min-width: 130px;
-  }
-
-  th:nth-child(4), td:nth-child(4) {
-    min-width: 500px;
-  }
-  */
   th.sorted-asc::after {
     content: " ▲";
   }
@@ -157,33 +116,6 @@
   th.sorted-desc::after {
     content: " ▼";
   }
-  /*
-  th {
-    background-color: #141414;
-    user-select: none;
-    cursor: pointer;
-  }
-
-  th:hover {
-    background-color: #444444;
-  }
-
-  tr:nth-child(even) {
-    background-color: #2b2b2b;
-  }
-
-  tr:hover {
-    background-color: #444444;
-  }
-
-  .link-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .link-container a {
-    margin-right: 15px;
-  } */
 
   th { @apply select-none; }
   td { @apply !table-cell-fit; }
