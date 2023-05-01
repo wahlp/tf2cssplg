@@ -44,7 +44,7 @@
 </script>
 
 <div class="table-container">
-  <table>
+  <table class="table table-hover table-compact">
     <thead>
       <tr>
         <th 
@@ -109,7 +109,7 @@
 </div>
 
 <style>
-  .table-container {
+  /* .table-container {
     margin-left: 10px;
   }
 
@@ -149,7 +149,7 @@
   th:nth-child(4), td:nth-child(4) {
     min-width: 500px;
   }
-
+  */
   th.sorted-asc::after {
     content: " ▲";
   }
@@ -157,7 +157,7 @@
   th.sorted-desc::after {
     content: " ▼";
   }
-
+  /*
   th {
     background-color: #141414;
     user-select: none;
@@ -183,5 +183,8 @@
 
   .link-container a {
     margin-right: 15px;
-  }
+  } */
+
+  th { @apply select-none; }
+  td { @apply !table-cell-fit; }
 </style>

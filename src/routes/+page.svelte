@@ -7,16 +7,7 @@
     import Output from "$lib/Output.svelte";
 </script>
 
-<div class="container">
-<InputForm />
-<Output />
+<div class="flex flex-row justify-between items-start w-full">
+  <InputForm />
+  <Output />
 </div>
-
-<style>
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-</style>

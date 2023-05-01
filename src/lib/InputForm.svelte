@@ -18,25 +18,26 @@
   function handleSubmit(event: Event) {
     event.preventDefault();
 
-    dataStore.set(parseNameIdPairs(inputText));
+    const data = parseNameIdPairs(inputText);
+    dataStore.set(data);
     localStorage.setItem('inputText', inputText);
   }
 </script>
 
-<div class="form-container">
-  <form on:submit|preventDefault={handleSubmit}>
+<div class="w-4/5 h-[100vh]">
+  <form on:submit|preventDefault={handleSubmit} class="flex flex-col items-center w-full h-full p-6 space-y-4">
     <h1>dump your console output here</h1>
-    <textarea class="input" spellcheck="false" bind:value={inputText} />
-    <div class="button-container">
-      <a href="{base}/examples" class="examples-link">See examples</a>
-      <button class="button button-submit" type="submit">Submit</button>
+    <textarea class="textarea p-3 h-full w-full resize-none font-mono" rows="24" spellcheck="false" bind:value={inputText} />
+    <div class="w-full flex justify-between">
+      <a href="{base}/examples" class="h-fit">See examples</a>
+      <button class="btn btn-lg variant-filled-primary" type="submit">Submit</button>
     </div>
   </form>
 </div>
 
 <style>
 
-  .form-container {
+  /* .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,5 +96,5 @@
   }
   .button-submit:hover {
     background-color: #48a54b;
-  }
+  } */
 </style>
