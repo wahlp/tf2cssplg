@@ -92,10 +92,10 @@
     <tbody>
       {#each outputData as { name, ping, id3, url }}
         <tr>
-          <td>{name}</td>
-          <td>{ping}</td>
-          <td>{id3}</td>
-          <td>
+          <td class="table-cell-fit">{name}</td>
+          <td class="table-cell-fit">{ping}</td>
+          <td class="table-cell-fit">{id3}</td>
+          <td class="table-cell-fit">
             <div class="link-container">
               <a href={url} target="_blank" rel="noreferrer">
                 {url}
@@ -118,5 +118,4 @@
   }
 
   th { @apply select-none; }
-  td { @apply !table-cell-fit; }
 </style>
