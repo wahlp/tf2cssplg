@@ -12,7 +12,7 @@ function convertSteam3ToSteam64(id3: string): string {
 }
 
 export function parseNameIdPairs(text: string) {
-  const regex = /"(.+)"\s+\[U:(\d+):(\d+)\]\s+(\d+:\d+)\s+(\d+)/g;
+  const regex = /"(.+)"\s+\[U:(\d+):(\d+)\]\s+((?:\d:)?\d+:\d+)\s+(\d+)/g;
   const mappings: NameIdMapping[] = [];
 
   let match: RegExpExecArray | null;
